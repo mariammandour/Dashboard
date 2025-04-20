@@ -1,0 +1,25 @@
+<div [ngClass]="{
+    'translate-x-0': isSidebarOpen,
+    '-translate-x-full': !isSidebarOpen
+}"
+    class="bg-white fixed sidebar text-center px-4 py-5 inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0">
+    <!-- Close button for mobile view -->
+    <button (click)="isSidebarOpen = false" class="absolute top-4 left-4 lg:hidden">
+        <img src="../assets/sidebar-icons/close.svg" alt="Close Sidebar" class="w-6 h-6" />
+    </button>
+
+    <img src="../assets/main-logo.svg" alt="Company Logo" class="m-auto py-4" />
+    <nav class="p-4 space-y-2 border-b border-gray-100 m-auto">
+        <a *ngFor="let page of pagesList1" class="flex px-6 py-4 rounded" [routerLink]="page.link"
+            routerLinkActive="active">
+            <img [src]="page.icon" [alt]="page.name + ' Icon'" class="mr-2" />
+            <span class="pt-1">{{ page.name }}</span>
+        </a>
+    </nav>
+    <nav class="p-4 space-y-2 border-gray-100 m-auto">
+        <a *ngFor="let page of pagesList2" class="flex px-6 py-4 rounded" [routerLink]="page.link">
+            <img [src]="page.icon" [alt]="page.name + ' Icon'" class="mr-2" />
+            <span class="pt-1">{{ page.name }}</span>
+        </a>
+    </nav>
+</div>

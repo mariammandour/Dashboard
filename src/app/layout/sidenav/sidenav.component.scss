@@ -1,0 +1,24 @@
+.sidebar {
+    a {
+        font-size: 16px;
+        color: #aeb9be;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: #0561fc;
+            background-color: #EDF4FF;
+            img {
+                filter: brightness(0) saturate(100%) invert(23%) sepia(96%) saturate(7462%) hue-rotate(213deg) brightness(99%) contrast(106%);
+            }
+        }
+
+        &.active {
+            color: #0561fc;
+            background-color: #EDF4FF;
+            img {
+                filter: brightness(0) saturate(100%) invert(23%) sepia(96%) saturate(7462%) hue-rotate(213deg) brightness(99%) contrast(106%);
+            }
+        }
+    }
+}
