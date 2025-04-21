@@ -1,0 +1,35 @@
+<div class="bg-white rounded-xl p-4">
+    <div class="flex justify-between items-center mb-2 px-3">
+        <h1 class="text-xl font-medium">Report</h1>
+        <div class="flex gap-2">
+            <button (click)="updateChart('D')" [class]="
+            'text-sm font-medium px-2 py-1 rounded transition ' +
+            (selectedRange === 'D'
+            ? 'text-blue-600'
+            : 'text-gray-400 hover:text-blue-500')
+        ">
+                Day
+            </button>
+            <button (click)="updateChart('W')" [class]="
+            'text-sm font-medium px-2 py-1 rounded transition ' +
+            (selectedRange === 'W'
+            ? 'text-blue-600'
+            : 'text-gray-400 hover:text-blue-500')
+        ">
+                Week
+            </button>
+            <button (click)="updateChart('M')" [class]="
+            'text-sm font-medium px-2 py-1 rounded transition ' +
+            (selectedRange === 'M'
+            ? 'text-blue-600'
+            : 'text-gray-400 hover:text-blue-500')
+        ">
+                Month
+            </button>
+        </div>
+    </div>
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis" [dataLabels]="chartOptions.dataLabels" [stroke]="chartOptions.stroke"
+        [markers]="chartOptions.markers" [tooltip]="chartOptions.tooltip" [fill]="chartOptions.fill"
+        [grid]="chartOptions.grid"></apx-chart>
+</div>
