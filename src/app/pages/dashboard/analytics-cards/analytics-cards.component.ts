@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from '../../../services/analytics.service';
 import { AnalyticsMetrics } from '../../../interfaces/analytics.interface';
 
@@ -7,7 +7,7 @@ import { AnalyticsMetrics } from '../../../interfaces/analytics.interface';
   templateUrl: './analytics-cards.component.html',
   styleUrl: './analytics-cards.component.scss'
 })
-export class AnalyticsCardsComponent {
+export class AnalyticsCardsComponent implements OnInit {
   metrics!: AnalyticsMetrics;
   loading = true;
   error: string | null = null;

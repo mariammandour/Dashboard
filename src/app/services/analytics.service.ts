@@ -6,7 +6,6 @@ import { AnalyticsMetrics } from '../interfaces/analytics.interface';
   providedIn: 'root',
 })
 export class AnalyticsService {
-  constructor() {}
   getMetrics(): Observable<AnalyticsMetrics> {
     const mockData = {
       totalRevenue: {
@@ -22,7 +21,7 @@ export class AnalyticsService {
     };
 
     return of(mockData).pipe(
-      delay(1500),
+      delay(100),
       catchError((error) => {
         console.error('Failed to fetch metrics', error);
         return throwError(() => new Error('Failed to fetch metrics'));

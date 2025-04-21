@@ -8,7 +8,7 @@ import { pagesList2 } from '../../constants/pages.constant';
   styleUrl: './sidenav.component.scss'
 })
 export class SidenavComponent {
-  @Input() isSidebarOpen: boolean = true;
+  @Input() isSidebarOpen = true;
   pagesList1 = pagesList1;
   pagesList2 = pagesList2;
   
