@@ -1,0 +1,12 @@
+<div class="h-full flex items-center px-4 py-7 rounded-lg bg-white">
+    <img alt="team" class="w-16 h-16 object-cover object-center flex-shrink-0 rounded-full mr-4" [src]="img">
+    <div class="flex-grow">
+        <h2 class="text-gray-400 title-font mb-2 text-xs">{{title}}</h2>
+        <p class="font-medium text-2xl">{{text}} <span *ngIf="!!label"
+                class="inline-block mt-1 text-sm px-2 py-1 rounded-full w-fit ml-2" [ngClass]="{
+            'bg-green-100 text-green-500': label >= 0,
+            'bg-red-100 text-red-500': label < 0
+        }">{{ label >= 0 ? '+' : '' }}
+                {{label}} %</span></p>
+    </div>
+</div>

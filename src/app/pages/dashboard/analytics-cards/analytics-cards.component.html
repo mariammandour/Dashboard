@@ -1,0 +1,22 @@
+<section class="py-10 px-10 analytics" *ngIf="metrics">
+    <h1 class="text-lg font-medium mb-4">Analytics</h1>
+
+    <div class="flex flex-wrap -m-2">
+        <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+            <app-card title="Total Revenue" text="${{ metrics.totalRevenue.value }}k"
+                img="../assets/Dashboard/Icon_Total_Revenue.svg" [label]="metrics.totalRevenue.percent"></app-card>
+        </div>
+        <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+            <app-card title="Today Revenue" text="${{ metrics.dailyRevenue.value }}"
+                img="../assets/Dashboard/Icon_Today Revenue.svg" [label]="metrics.dailyRevenue.percent"></app-card>
+        </div>
+        <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+            <app-card title="Items Sold" text="{{ metrics.itemsSold }}"
+                img="../assets/Dashboard/Icon_Sales.svg"></app-card>
+        </div>
+        <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+            <app-card title="Users Active" text="{{ metrics.activeUsers }}"
+                img="../assets/Dashboard/Icon_Users.svg"></app-card>
+        </div>
+    </div>
+</section>
